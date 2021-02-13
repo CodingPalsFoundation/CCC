@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class CCC15S1 {
+    public static void main(String[] args) {
+        Scanner s;
+        s = new Scanner(System.in);
+        int num = s.nextInt();
+        LinkedList<Integer> x = new LinkedList<>();
+        for (int i = 0; i < num; i++) {
+            int z = s.nextInt();
+            if (z == 0) {
+                x.removeLast();
+            } else {
+                x.add(z);
+            }
+        }
+        int g = 0;
+        for (int i = 0; i < x.size(); i++) {
+            g = g + x.get(i);
+        }
+        System.out.println(g);
+    }
+}
