@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class CCC17S2 {
+    public static void main(String[] args) {
+        Scanner s;
+        s = new Scanner(System.in);
+        double num = s.nextInt();
+        ArrayList<Long> x = new ArrayList<>();
+        for (int i = 0; i < num; i++) {
+            x.add(s.nextLong());
+        }
+        Collections.sort(x);
+        int f = (int) Math.ceil(num / 2);
+        for (int i = 0; i < Math.ceil(num / 2); i++) {
+            if (i < Math.floor(num / 2)) {
+                System.out.print(x.get(f - 1 - i) + " ");
+                System.out.print(x.get(f + i) + " ");
+            } else {
+                System.out.print(x.get(f - 1 - i));
+            }
+        }
+
+    }
+}
